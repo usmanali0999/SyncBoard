@@ -1,36 +1,158 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 SyncBoard
 
-## Getting Started
+A modern, real-time collaborative project management platform built with Next.js 16, TypeScript, and cutting-edge web technologies.
 
-First, run the development server:
+![Next.js](https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-4-38bdf8?style=for-the-badge&logo=tailwindcss)
+![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- 🎨 Modern UI/UX with dark mode support
+- 📋 Kanban Boards with drag-and-drop functionality
+- 👥 Real-time Collaboration with team members
+- 📊 Analytics Dashboard with powerful insights
+- 🔐 Role-based Access Control
+- 🌓 Dark Mode support
+- ⚡ Lightning Fast performance with Next.js 16
+- 📱 Fully Responsive design
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## 🛠️ Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+**Core**
+- Framework: Next.js 16 (App Router)
+- Language: TypeScript
+- Styling: Tailwind CSS v4
+- UI Components: shadcn/ui + Base UI
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**State Management**
+- Global State: Zustand
+- Server State: TanStack Query (React Query)
+- HTTP Client: Axios
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Forms & Validation**
+- Forms: React Hook Form
+- Validation: Zod
 
-## Deploy on Vercel
+**UI & Animation**
+- Animations: Framer Motion
+- Drag & Drop: dnd-kit
+- Charts: Recharts
+- Icons: Lucide React
+- Themes: next-themes
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Utilities**
+- Dates: date-fns
+- Class Names: clsx + tailwind-merge
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## 📁 Project Structure
+
+    sync-board/
+    ├── src/
+    │   ├── app/
+    │   │   ├── (auth)/
+    │   │   │   ├── login/
+    │   │   │   └── register/
+    │   │   ├── (dashboard)/
+    │   │   │   ├── dashboard/
+    │   │   │   ├── projects/
+    │   │   │   ├── analytics/
+    │   │   │   └── settings/
+    │   │   ├── layout.tsx
+    │   │   └── page.tsx
+    │   ├── components/
+    │   │   ├── ui/
+    │   │   ├── layout/
+    │   │   ├── dashboard/
+    │   │   ├── board/
+    │   │   ├── modals/
+    │   │   └── shared/
+    │   ├── lib/
+    │   ├── hooks/
+    │   ├── store/
+    │   ├── types/
+    │   ├── config/
+    │   ├── services/
+    │   ├── utils/
+    │   ├── styles/
+    │   └── constants/
+    ├── public/
+    └── package.json
+
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18.17 or later
+- npm or yarn or pnpm
+
+### Installation
+
+Clone the repository:
+
+    git clone https://github.com/yourusername/sync-board.git
+    cd sync-board
+
+Install dependencies:
+
+    npm install
+
+Run the development server:
+
+    npm run dev
+
+Open your browser at http://localhost:3000
+
+
+## 📜 Available Scripts
+
+| Command | Description |
+|---------|-------------|
+| npm run dev | Start development server |
+| npm run build | Build for production |
+| npm run start | Start production server |
+| npm run lint | Run ESLint |
+| npm run format | Format code with Prettier |
+| npm run type-check | Check TypeScript types |
+
+
+## 🗺️ Roadmap
+
+- [x] Project setup & architecture
+- [x] Landing page
+- [ ] Authentication (Login/Register)
+- [ ] Dashboard layout
+- [ ] Kanban board with drag & drop
+- [ ] Task management (CRUD)
+- [ ] Real-time collaboration
+- [ ] Analytics dashboard
+- [ ] Notifications system
+- [ ] User settings & profile
+- [ ] Role-based access control
+- [ ] Testing & deployment
+
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+
+## 📝 License
+
+This project is MIT licensed.
+
+
+## 👨‍💻 Author
+
+**Usman Ali**
+
+- GitHub: [@usmanali0999](https://github.com/usmanali0999)
+
+---
+
+⭐ If you like this project, please give it a star!

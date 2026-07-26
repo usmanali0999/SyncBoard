@@ -4,10 +4,8 @@ import { useState } from 'react'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ThemeProvider } from 'next-themes'
 import { TooltipProvider } from '@/components/ui/tooltip'
+import { Toaster } from '@/components/ui/sonner'
 
-// ============================================
-// QUERY CLIENT CONFIG
-// ============================================
 const queryClientConfig = {
   defaultOptions: {
     queries: {
@@ -16,15 +14,10 @@ const queryClientConfig = {
       retry: 1,
       refetchOnWindowFocus: false,
     },
-    mutations: {
-      retry: 0,
-    },
+    mutations: { retry: 0 },
   },
 }
 
-// ============================================
-// PROVIDERS COMPONENT
-// ============================================
 interface ProvidersProps {
   children: React.ReactNode
 }
@@ -41,6 +34,7 @@ export function Providers({ children }: ProvidersProps) {
         disableTransitionOnChange
       >
         <TooltipProvider>{children}</TooltipProvider>
+        <Toaster position="top-right" richColors />
       </ThemeProvider>
     </QueryClientProvider>
   )

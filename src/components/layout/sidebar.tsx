@@ -10,6 +10,9 @@ import {
   Layout,
   ChevronLeft,
   ChevronRight,
+  Users,
+  Calendar,
+  MessageSquare,
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
@@ -20,35 +23,16 @@ import {
   TooltipTrigger,
 } from '@/components/ui/tooltip'
 
-// ============================================
-// NAVIGATION ITEMS
-// ============================================
 const navItems = [
-  {
-    label: 'Dashboard',
-    href: '/dashboard',
-    icon: LayoutDashboard,
-  },
-  {
-    label: 'Projects',
-    href: '/projects',
-    icon: FolderKanban,
-  },
-  {
-    label: 'Analytics',
-    href: '/analytics',
-    icon: BarChart3,
-  },
-  {
-    label: 'Settings',
-    href: '/settings',
-    icon: Settings,
-  },
+  { label: 'Dashboard', href: '/dashboard', icon: LayoutDashboard },
+  { label: 'Projects', href: '/projects', icon: FolderKanban },
+  { label: 'Team', href: '/team', icon: Users },
+  { label: 'Calendar', href: '/calendar', icon: Calendar },
+  { label: 'Messages', href: '/messages', icon: MessageSquare },
+  { label: 'Analytics', href: '/analytics', icon: BarChart3 },
+  { label: 'Settings', href: '/settings', icon: Settings },
 ]
 
-// ============================================
-// SIDEBAR COMPONENT
-// ============================================
 export function Sidebar() {
   const pathname = usePathname()
   const { isSidebarOpen, toggleSidebar } = useUIStore()
@@ -60,7 +44,6 @@ export function Sidebar() {
         isSidebarOpen ? 'w-64' : 'w-16'
       )}
     >
-      {/* ============ LOGO ============ */}
       <div
         className={cn(
           'flex h-16 items-center border-b border-border/40 px-4',
@@ -71,13 +54,10 @@ export function Sidebar() {
           <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary">
             <Layout className="h-5 w-5 text-primary-foreground" />
           </div>
-          {isSidebarOpen && (
-            <span className="text-lg font-bold">SyncBoard</span>
-          )}
+          {isSidebarOpen && <span className="text-lg font-bold">SyncBoard</span>}
         </Link>
       </div>
 
-      {/* ============ NAVIGATION ============ */}
       <nav className="flex-1 space-y-1 p-3">
         {navItems.map((item) => {
           const isActive = pathname === item.href
@@ -105,12 +85,10 @@ export function Sidebar() {
               </Tooltip>
             )
           }
-
           return <div key={item.href}>{link}</div>
         })}
       </nav>
 
-      {/* ============ COLLAPSE BUTTON ============ */}
       <div className="border-t border-border/40 p-3">
         <Button
           variant="ghost"
